@@ -16,6 +16,7 @@ function App() {
       }, (error) => {
         setError(error.message);
       });
+      
     } else {
       setError('Geolocation is not supported by this browser.');
     }
@@ -24,7 +25,7 @@ function App() {
   useEffect(() => {
     if (location) {
       const { latitude, longitude } = location;
-      const apiKey = 'fc49c842aa87427e812eb58b2c735a80';
+      const apiKey = '89a75113846dc8ef828a620cac633c86';
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
 
       axios.get(apiUrl)
